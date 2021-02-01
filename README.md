@@ -121,23 +121,23 @@ As a user I want to buy a Stock and add it to my Wallet.
 
 **GIVEN** an empty wallet
 
-**WHEN** I buy a stock 
+**WHEN** I buy a "EUR" 
 
-**THEN** the wallet should contain only the stock I bought
+**THEN** the wallet should contain 1 stocks
 
-**AND** the stock in the wallet should be equal to the added one
+**AND** the stock in the wallet should be "EUR"
 
 
 
 * <u>Scenario 2</u>
 
-**GIVEN** a wallet containing 2 Stocks
+**GIVEN** a wallet containing a "EUR" and "USD"
 
-**WHEN** I buy a stock to the wallet
+**WHEN** I buy a "JPY"
 
-**THEN** I should have 3 stocks in my wallet
+**THEN** the wallet should contain 3 stocks
 
-**AND** the third one should be equal to the added one
+**AND** the third one should be equal to "JPY"
 
 
 
@@ -211,6 +211,6 @@ As a user I want to sell the content wallet. Selling a wallet is selling all sto
 
 **WHEN** I sell the wallet content
 
-**THEN** I should recieve 34 euros 
+**THEN** I should receive 34 euros 
 
 **AND** the content of the wallet should be empty 

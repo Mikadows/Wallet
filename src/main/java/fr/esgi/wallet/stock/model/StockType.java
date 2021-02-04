@@ -1,4 +1,4 @@
-package fr.esgi.wallet.model;
+package fr.esgi.wallet.stock.model;
 
 public enum StockType {
     DOLLAR("USD"),

@@ -1,4 +1,4 @@
-package fr.esgi.wallet.model;
+package fr.esgi.wallet.stock.model;
 
 import java.util.Objects;
 
@@ -17,6 +17,10 @@ public class Stock {
 
     public StockType stockType() {
         return stockType;
+    }
+
+    public static Stock of(Integer quantity, StockType stockType) {
+        return new Stock(quantity, stockType);
     }
 
     @Override

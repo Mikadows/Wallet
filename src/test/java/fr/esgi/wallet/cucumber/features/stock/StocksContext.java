@@ -1,7 +1,6 @@
-package fr.esgi.wallet.cucumber.features;
+package fr.esgi.wallet.cucumber.features.stock;
 
-import fr.esgi.wallet.model.Stock;
-import fr.esgi.wallet.model.StockType;
+import fr.esgi.wallet.stock.model.Stock;
 
 import java.util.ArrayList;
 import java.util.List;

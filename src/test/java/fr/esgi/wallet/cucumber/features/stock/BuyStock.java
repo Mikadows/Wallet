@@ -1,8 +1,7 @@
-package fr.esgi.wallet.cucumber.features;
+package fr.esgi.wallet.cucumber.features.stock;
 
-import fr.esgi.wallet.model.Stock;
-import fr.esgi.wallet.model.StockType;
-import fr.esgi.wallet.model.Wallet;
+import fr.esgi.wallet.stock.model.Stock;
+import fr.esgi.wallet.stock.model.Wallet;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +10,6 @@ import org.junit.Assert;
 
 public class BuyStock {
     private Wallet wallet;
-    private Stock euro = new Stock(5, StockType.EURO);
     private StocksContext stocksContext;
 
     public BuyStock(StocksContext stocksContext) {
@@ -21,21 +19,6 @@ public class BuyStock {
     @Given("an empty wallet")
     public void anEmptyWallet() {
         this.wallet = new Wallet();
-    }
-
-//    @When("I buy a stock")
-//    public void iBuyAStock() {
-//        this.wallet.buyStock(euro);
-//    }
-
-    @Then("the wallet should contain only the stock I bought")
-    public void theWalletShouldContainOnlyTheStockIBought() {
-        Assert.assertEquals(1, this.wallet.stocks().size());
-    }
-
-    @And("the stock in the wallet should be the added one")
-    public void theStockInTheWalletShouldBeTheAddedOne() {
-        Assert.assertEquals(euro, this.wallet.stocks().get(0));
     }
 
     @When("I buy a {string}")

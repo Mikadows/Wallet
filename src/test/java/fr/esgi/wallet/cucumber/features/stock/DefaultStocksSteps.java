@@ -1,7 +1,7 @@
-package fr.esgi.wallet.cucumber.features;
+package fr.esgi.wallet.cucumber.features.stock;
 
-import fr.esgi.wallet.model.Stock;
-import fr.esgi.wallet.model.StockType;
+import fr.esgi.wallet.stock.model.Stock;
+import fr.esgi.wallet.stock.model.StockType;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Then;

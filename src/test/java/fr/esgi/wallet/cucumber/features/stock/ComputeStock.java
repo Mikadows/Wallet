@@ -32,7 +32,7 @@ public class ComputeStock {
 
     @When("I compute the stock value")
     public void iComputeTheStockValue() {
-        ComputationController computationController = new ComputationController(new FakeExchangeAPI());
+        ComputationController computationController = new ComputationController(new FakeExchangeAPI(this.rate));
         this.money = computationController.compute(this.stock, this.currency);
     }
 
@@ -44,19 +44,6 @@ public class ComputeStock {
     @Given("no currency")
     public void noCurrency() {
         this.currency = null;
-    }
-
-    @Then("an error should be thrown")
-    public void anErrorShouldBeThrown() {
-//        Assert.assertThrows()
-    }
-
-    public class FakeExchangeAPI implements ExchangeRateService {
-
-        @Override
-        public Double getRate(Currency from, Currency to) {
-            return rate;
-        }
     }
 
 }

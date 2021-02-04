@@ -1,6 +1,7 @@
 package fr.esgi.wallet.computation.model;
 
 import fr.esgi.wallet.stock.model.Stock;
+import fr.esgi.wallet.stock.model.Wallet;
 
 import java.util.Map;
 
@@ -22,5 +23,12 @@ public class ComputationController {
         return Money.of((int) (from.quantity() * rate), to);
     }
 
+    public Money compute(Wallet from, Currency to) {
+        Money result = Money.of(0, to);
+        for (Stock stock : from.stocks()) {
+            result = Money.of(this.compute(stock, to).value() + result.value(), to);
+        }
+        return result;
+    }
 
 }

@@ -2,6 +2,7 @@ package fr.esgi.wallet.stock.model;
 
 public enum StockType {
     DOLLAR("USD"),
+    DOLLAR_CANADA("CAD"),
     EURO("EUR"),
     YEN("JPY");
 

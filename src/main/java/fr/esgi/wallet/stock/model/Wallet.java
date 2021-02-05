@@ -19,6 +19,14 @@ public class Wallet {
         return this.stocks.add(stock);
     }
 
+    public boolean sellStock(Stock stock) {
+        return this.stocks.remove(stock);
+    }
+
+    public void sellWallet() {
+        this.stocks.clear();
+    }
+
     public List<Stock> stocks() {
         return stocks;
     }

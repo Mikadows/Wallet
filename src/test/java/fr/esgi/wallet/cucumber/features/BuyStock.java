@@ -1,4 +1,4 @@
-package fr.esgi.wallet.cucumber.features.stock;
+package fr.esgi.wallet.cucumber.features;
 
 import fr.esgi.wallet.stock.model.Stock;
 import fr.esgi.wallet.stock.model.Wallet;

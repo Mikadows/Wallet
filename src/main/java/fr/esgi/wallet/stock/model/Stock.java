@@ -35,4 +35,12 @@ public class Stock {
     public int hashCode() {
         return Objects.hash(quantity, stockType);
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "quantity=" + quantity +
+                ", stockType=" + stockType +
+                '}';
+    }
 }

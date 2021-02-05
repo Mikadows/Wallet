@@ -1,4 +1,4 @@
-package fr.esgi.wallet.cucumber.features.stock;
+package fr.esgi.wallet.cucumber.features;
 
 import fr.esgi.wallet.stock.model.Stock;
 import fr.esgi.wallet.stock.model.StockType;
@@ -22,9 +22,11 @@ public class DefaultStocksSteps {
         final Stock euro = new Stock(5, StockType.EURO);
         final Stock dollar = new Stock(2, StockType.DOLLAR);
         final Stock yen = new Stock(10, StockType.YEN);
+        final Stock dollar_canada = new Stock(4, StockType.DOLLAR_CANADA);
         this.stocksContext.addDefaultStock(euro);
         this.stocksContext.addDefaultStock(dollar);
         this.stocksContext.addDefaultStock(yen);
+        this.stocksContext.addDefaultStock(dollar_canada);
     }
 
     @Then("the available stocks should be at least:")

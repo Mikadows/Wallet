@@ -1,8 +1,7 @@
-package fr.esgi.wallet.cucumber.features.stock;
+package fr.esgi.wallet.cucumber.features;
 
 import fr.esgi.wallet.computation.model.ComputationController;
 import fr.esgi.wallet.computation.model.Currency;
-import fr.esgi.wallet.computation.model.ExchangeRateService;
 import fr.esgi.wallet.computation.model.Money;
 import fr.esgi.wallet.stock.model.Stock;
 import fr.esgi.wallet.stock.model.StockType;

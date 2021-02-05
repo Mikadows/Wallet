@@ -9,6 +9,7 @@ public class ComputationController {
     private final ExchangeRateService exchangeRateService;
     private final Map<String, String> map = Map.of(
             "USD", "DOLLAR",
+            "CAD", "DOLLAR_CANADA",
             "EUR", "EURO",
             "JPY", "YEN"
     );

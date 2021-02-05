@@ -2,6 +2,7 @@ package fr.esgi.wallet.computation.model;
 
 public enum Currency {
     DOLLAR("USD"),
+    DOLLAR_CANADA("CAD"),
     EURO("EUR"),
     YEN("JPY");
 

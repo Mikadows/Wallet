@@ -1,6 +1,8 @@
 package fr.esgi.wallet.computation.model;
 
 
+import java.util.Objects;
+
 public class Money {
     private final Integer value;
     private final Currency currency;
@@ -20,5 +22,26 @@ public class Money {
 
     public Integer value() {
         return value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Money money = (Money) o;
+        return Objects.equals(value, money.value) && currency == money.currency;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, currency);
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "value=" + value +
+                ", currency=" + currency +
+                '}';
     }
 }

@@ -16,6 +16,7 @@ public class Wallet {
     }
 
     public boolean buyStock(Stock stock) {
+        if (stock == null) return false;
         return this.stocks.add(stock);
     }
 
